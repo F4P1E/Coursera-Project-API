@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content=”no-cache”>
+    <meta http-equiv="Expires" content=”-1″>
+    <meta http-equiv="CACHE-CONTROL" content=”NO-CACHE”>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/master.css">
+
+    <title>API Project</title>
+</head>
+
+<body>
+
+
+<header>
+
+
+
+<!--
+<nav>NAV-NAV-NAV-NAV
+</nav>
+-->
+<br>
+    <h1>Coursera API Project</h1>
+    <h1>Europe weather forecast with 7Timer! API</h1>
+
+
+    <div class="scrollcountry">
+        <button onclick="show_palces('Austria')">Austria</button>
+        <button onclick="show_palces('Belgium')">Belgium</button>
+        <button onclick="show_palces('Bulgaria')">Bulgaria</button>
+        <button onclick="show_palces('Czech Republic')">Czech Republic</button>
+        <button onclick="show_palces('Denmark')">Denmark</button>
+        <button onclick="show_palces('England')">England</button>
+        <button onclick="show_palces('Estonia')">Estonia</button>
+        <button onclick="show_palces('Finland')">Finland</button>
+        <button onclick="show_palces('France')">France</button>
+        <button onclick="show_palces('Germany')">Germany</button>
+        <button onclick="show_palces('Greece')">Greece</button>
+        <button onclick="show_palces('Hungary')">Hungary</button>
+        <button onclick="show_palces('Iceland')">Iceland</button>
+        <button onclick="show_palces('Ireland')">Ireland</button>
+        <button onclick="show_palces('Italy')">Italy</button>
+        <button onclick="show_palces('Latvia')">Latvia</button>
+        <button onclick="show_palces('Netherlands')">Netherlands</button>
+        <button onclick="show_palces('Northern Ireland')">Northern Ireland</button>
+        <button onclick="show_palces('Norway')">Norway</button>
+        <button onclick="show_palces('Poland')">Poland</button>
+        <button onclick="show_palces('Portugual')">Portugual</button>
+        <button onclick="show_palces('Romania')">Romania</button>
+        <button onclick="show_palces('Scotland')">Scotland</button>
+        <button onclick="show_palces('Spain')">Spain</button>
+        <button onclick="show_palces('Sweden')">Sweden</button>
+        <button onclick="show_palces('Switzerland')">Switzerland</button>
+        <button onclick="show_palces('Turkey')">Turkey</button>
+        <button onclick="show_palces('Ukraine')">Ukraine</button>
+        <button onclick="show_palces('Wales')">Wales</button>
+    </div>
+
+
+
+
+    <div id="invite" style="margin: auto;width: fit-content">
+        <h2>Select a country to see places</h2>
+    </div>
+    <div id="invite2" class="hide" style="margin: auto;width: fit-content">
+        <h2>Select place to see weather forecast</h2>
+    </div>
+
+    <div class="scrollcity" >
+
+    <div class="places hide" id="Austria">
+        <button onclick="query_weather(18.208,16.373,'Vienna')">Vienna</button>
+    </div>
+    <div class="places hide" id="Belgium">
+        <button onclick="query_weather(50.847,4.357,'Brussels')">Brussels</button>
+    </div>
+    <div class="places hide" id="Bulgaria">
+        <button onclick="query_weather(42.697,23.321,'Sofia')">Sofia</button>
+    </div>
+    <div class="places hide" id="Czech Republic">
+        <button onclick="query_weather(50.075,14.437,'Prague')">Prague</button>
+    </div>
+    <div class="places hide" id="Denmark">
+        <button onclick="query_weather(55.676,12.568,'Copenhagen')">Copenhagen</button>
+    </div>
+    <div class="places hide" id="England">
+        <button onclick="query_weather(51.507,-0.127,'London')">London</button>
+        <button onclick="query_weather(53.480,-2.242,'Manchester')">Manchester</button>
+        <button onclick="query_weather(53.961,-1.07,'York')">York</button>
+    </div>
+    <div class="places hide" id="Estonia">
+        <button onclick="query_weather(59.437,24.753,'Tallinn')">Tallinn</button>
+    </div>
+    <div class="places hide" id="Finland">
+        <button onclick="query_weather(60.169,24.938,'Helsinki')">Helsinki</button>
+    </div>
+    <div class="places hide" id="France">
+        <button onclick="query_weather(43.254,6.637,'French Riviera')">French Riviera</button>
+        <button onclick="query_weather(43.296,5.369,'Marseille')">Marseille</button>
+        <button onclick="query_weather(48.856,2.352,'Paris')">Paris</button>
+    </div>
+    <div class="places hide" id="Germany">
+        <button onclick="query_weather(52.520,13.405,'Berlin')">Berlin</button>
+        <button onclick="query_weather(50.937,6.96,'Cologne')">Cologne</button>
+        <button onclick="query_weather(50.110,8.682,'Frankfurt')">Frankfurt</button>
+        <button onclick="query_weather(53.548,9.987,'Hamburg')">Hamburg</button>
+        <button onclick="query_weather(48.135,11.582,'Munich')">Munich</button>
+    </div>
+    <div class="places hide" id="Greece">
+        <button onclick="query_weather(37.983,23.727,'Athens')">Athens</button>
+    </div>
+    <div class="places hide" id="Hungary">
+        <button onclick="query_weather(59.329,18.068,'Budapest')">Budapest</button>
+    </div>
+    <div class="places hide" id="Iceland">
+        <button onclick="query_weather(64.146,-21.942,'Reykjavík')">Reykjavík</button>
+    </div>
+    <div class="places hide" id="Ireland">
+        <button onclick="query_weather(51.898,-8.475,'Cork')">Cork</button>
+        <button onclick="query_weather(53.349,-6.260,'Dublin')">Dublin</button>
+    </div>
+    <div class="places hide" id="Italy">
+        <button onclick="query_weather(43.7696,11.255,'Florence')">Florence</button>
+        <button onclick="query_weather(45.464,9.190,'Milan')">Milan</button>
+        <button onclick="query_weather(40.851,14.268,'Naples')">Naples</button>
+        <button onclick="query_weather(41.902,12.496,'Rome')">Rome</button>
+    </div>
+    <div class="places hide" id="Latvia">
+        <button onclick="query_weather(56.879,24.603,'Riga')">Riga</button>
+    </div>
+    <div class="places hide" id="Netherlands">
+        <button onclick="query_weather(52.367,4.904,'Amsterdam')">Amsterdam</button>
+    </div>
+    <div class="places hide" id="Northern Ireland">
+        <button onclick="query_weather(54.597,-5.930,'Belfast')">Belfast</button>
+    </div>
+    <div class="places hide" id="Norway">
+        <button onclick="query_weather(59.913,10.752,'Oslo')">Oslo</button>
+    </div>
+    <div class="places hide" id="Poland">
+        <button onclick="query_weather(52.229,21.012,'Warsaw')">Warsaw</button>
+    </div>
+    <div class="places hide" id="Portugual">
+        <button onclick="query_weather(32.650,-16.908,'Funchal')">Funchal</button>
+        <button onclick="query_weather(38.722,-9.139,'Lisbon')">Lisbon</button>
+        <button onclick="query_weather(39.453,-31.127,'Santa Cruz das Flores')">Santa Cruz das Flores</button>
+    </div>
+    <div class="places hide" id="Romania">
+        <button onclick="query_weather(47.497,19.040,'Bucharest')">Bucharest</button>
+    </div>
+    <div class="places hide" id="Scotland">
+        <button onclick="query_weather(55.953,-3.188,'Edinburgh')">Edinburgh</button>
+        <button onclick="query_weather(57.273,-6.215,'Skye')">Skye</button>
+
+    </div>
+    <div class="places hide" id="Spain">
+        <button onclick="query_weather(41.387,2.168,'Barcelona')">Barcelona</button>
+        <button onclick="query_weather(43.263,-2.935,'Bilbao')">Bilbao</button>
+        <button onclick="query_weather(39.020,1.482,'Ibiza')">Ibiza</button>
+        <button onclick="query_weather(40.416,-3.703,'Madrid')">Madrid</button>
+        <button onclick="query_weather(39.695,3.017,'Mallorca')">Mallorca</button>
+        <button onclick="query_weather(27.760,-15.586,'Maspalomas')">Maspalomas</button>
+        <button onclick="query_weather(43.034,-2.417,'Oñati')">Oñati</button>
+        <button onclick="query_weather(28.463,-16.251,'Santa Cruz de Tenerife')">Santa Cruz de Tenerife</button>
+
+    </div>
+    <div class="places hide" id="Sweden">
+        <button onclick="query_weather(56.134,12.945,'Åstorp')">Åstorp</button>
+        <button onclick="query_weather(57.708,11.974,'Gothenburg')">Gothenburg</button>
+        <button onclick="query_weather(59.329,18.068,'Stockholm')">Stockholm</button>
+
+    </div>
+    <div class="places hide" id="Switzerland">
+        <button onclick="query_weather(46.948,7.447,'Bern')">Bern</button>
+        <button onclick="query_weather(47.376,8.541,'Zurich')">Zurich</button>
+
+    </div>
+    <div class="places hide" id="Turkey">
+        <button onclick="query_weather(39.933,32.859,'Ankara')">Ankara</button>
+    </div>
+    <div class="places hide" id="Ukraine">
+        <button onclick="query_weather(50.450,30.523,'Kyiv')">Kyiv</button>
+    </div>
+    <div class="places hide" id="Wales">
+        <button onclick="query_weather(51.483,-3.168,'Cardiff')">Cardiff</button>
+    </div>
+
+
+
+    </div>
+
+
+    <br><br>
+</header>
+<main id="main" class="hide">
+    <h2 style="margin: 20px auto;width:fit-content;">7-DAY Forecast for <span id="weather_place_name">City</span></h2>
+    <div class="forecast" id="forecast-tb">
+        <div class="frcst-day">
+            <div>01 JAN 2022</div>
+            <div>IMG</div>
+            <div>MIN T</div>
+            <div class="temp">
+                <div class="tempbar">
+                    <div class="tempbarday"></div>
+                </div>
+            </div>
+            <div>MAX T</div>
+        </div>
+
+        <div class="frcst-day">
+            <div>02 JAN 2022</div>
+            <div>IMG</div>
+            <div>MIN T</div>
+            <div class="temp">
+                <div class="tempbar">
+                    <div class="tempbarday"></div>
+                </div>
+            </div>
+            <div>MAX T</div>
+        </div>
+
+        <div class="frcst-day">
+            <div>03 JAN 2022</div>
+            <div>IMG</div>
+            <div>MIN T</div>
+            <div class="temp">
+                <div class="tempbar">
+                    <div class="tempbarday"></div>
+                </div>
+            </div>
+            <div>MAX T</div>
+        </div>
+
+
+    </div>
+
+
+    <br><br>
+    <br><br>
+
+
+</main>
+
+
+<footer>
+    <p class="copyright-text">© Copyright 2023 <a target="_blank" href="https://github.com/1001bug/">GitHub</a> | <a href="https://www.coursera.org/learner/alexey-ermolov-31337" target="_blank">Coursera profile</a> | <a href="https://www.linkedin.com/in/alexey-ermolov-188b06273">LinkedIn profile</a></p>
+</footer>
+
+</body>
+
+
+<!-- Our codes -->
+<script src="js/main.js"></script>
